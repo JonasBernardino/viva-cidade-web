@@ -2,12 +2,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 3rem;
+    padding: 0.8rem 3rem;
     background: transparent;
-    position: absolute;
     width: 100%;
     top: 0;
     z-index: 1000;
+    font-weight: 600;
+    position: fixed;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 
     .logo {
         font-size: 1.8rem;
@@ -24,25 +26,26 @@
         display: flex;
         gap: 2rem;
         align-items: center;
-
         a {
             cursor: pointer;
-            color: white;
+            color: white; 
             text-decoration: none;
-            font-weight: 400;
+            font-weight: 600;
             font-size: 1.1rem;
             position: relative;
-
             &::after {
                 content: "";
                 display: block;
                 height: 2px;
                 width: 0;
-                background-color: var(--amarelo-dourado);
+                background-color: var(--azul-profundo);
                 transition: width 0.3s ease;
                 position: absolute;
                 bottom: -5px;
                 left: 0;
+            }
+            &:hover{
+                color: var(--azul-profundo);
             }
 
             &:hover::after,
@@ -51,15 +54,41 @@
             }
         }
         .login-button {
-            padding: 0.4rem 1rem;
             background-color: var(--vermelho-alaranjado);
-            border-radius: 5px;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
             color: white;
             font-weight: bold;
-
+            transition: 0.3s ease;
             &::after {
                 display: none;
             }
+            &:hover {
+              background-color: var(--vermelho-alaranjado);
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            }
+          }
+    }
+}
+
+.fundo {
+    background-color: rgba(255, 255, 255, 0.664);
+    backdrop-filter: blur(1px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.fundo .logo {
+    color: var(--azul-profundo);
+  }
+  
+  .fundo .nav-links a {
+    color: var(--azul-profundo);
+  }
+  
+@media (max-width: 1024px) {
+    .navbar{
+        .logo{
+            display: none;
+
         }
     }
 }
