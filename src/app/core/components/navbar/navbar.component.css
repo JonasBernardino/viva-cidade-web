@@ -1,0 +1,65 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3rem;
+    background: transparent;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+    .logo {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: white;
+        font-family: 'Segoe UI', sans-serif;
+        cursor: pointer;
+        img{
+            width: 5rem;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+
+        a {
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 1.1rem;
+            position: relative;
+
+            &::after {
+                content: "";
+                display: block;
+                height: 2px;
+                width: 0;
+                background-color: var(--amarelo-dourado);
+                transition: width 0.3s ease;
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+            }
+
+            &:hover::after,
+            &.active::after {
+                width: 100%;
+            }
+        }
+        .login-button {
+            padding: 0.4rem 1rem;
+            background-color: var(--vermelho-alaranjado);
+            border-radius: 5px;
+            color: white;
+            font-weight: bold;
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
