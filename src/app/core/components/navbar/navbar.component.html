@@ -1,15 +1,20 @@
-<header class="navbar" [ngClass]="{ 'fundo': isScrolled }">
+<header class="navbar" [ngClass]="{ fundo: isScrolled }">
   <div class="logo">
     <a routerLink="/"
       ><img src="assets/img/logo.png" alt="Logo Viva Cidade" />
     </a>
   </div>
-  <nav class="nav-links">
-    <a routerLink="/">Início</a>
-    <a routerLink="/eventos">Eventos</a>
-    <a routerLink="/pontos-turisticos">Pontos Turísticos</a>
-    <a routerLink="/estabelecimentos">Estabelecimentos</a>
-    <a routerLink="/chamados">Abrir Chamado</a>
-    <a routerLink="/login" class="login-button">Entrar</a>
+
+  <button class="menu-icon" (click)="toggleMenu()">
+    &#9776;
+  </button>
+
+  <nav class="nav-links" [ngClass]="{ aberto: menuAberto }">
+    <a routerLink="/" (click)="fecharMenu()">Início</a>
+    <a routerLink="/eventos" (click)="fecharMenu()">Eventos</a>
+    <a routerLink="/pontos-turisticos" (click)="fecharMenu()">Pontos Turísticos</a>
+    <a routerLink="/estabelecimentos" (click)="fecharMenu()">Estabelecimentos</a>
+    <a routerLink="/chamados" (click)="fecharMenu()">Abrir Chamado</a>
+    <a routerLink="/login" class="login-button" (click)="fecharMenu()">Entrar</a>
   </nav>
 </header>
