@@ -1,0 +1,14 @@
+@if (evento) {
+<div class="evento-detalhe">
+  <img [src]="evento.imagemUrl" alt="Imagem do evento" />
+  <h1>{{ evento.titulo }}</h1>
+  <p>{{ evento.descricao }}</p>
+  <p><strong>Data e hora:</strong> {{ evento.dataHora }}</p>
+  <p><strong>Local:</strong> {{ evento.localizacao }}</p>
+  <p class="localizacao"><strong>Local:</strong> 📍 {{ evento.localizacao }}</p>
+
+  <a class="btn-mapa" target="_blank" rel="noopener noreferrer">
+    Ver rota no Google Maps
+  </a>
+</div>
+}

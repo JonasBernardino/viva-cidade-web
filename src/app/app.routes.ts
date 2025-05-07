@@ -8,20 +8,22 @@ import { ComidaComponent } from './pages/comida/comida.component';
 import { PasseiosComponent } from './pages/passeios/passeios.component';
 import { InfoComponent } from './pages/info/info.component';
 import { LoginComponent } from './pages/login/login.component';
+import { EventoDetalheComponent } from './core/components/evento-detalhe/evento-detalhe.component';
 
 export const routes: Routes = [
   {
     path: '',
     component: LayoutEventosComponent,
     children: [
-        { path: '', component: HomeComponent },
-        {path: 'eventos', component: EventosComponent},
-        {path: 'pontos-turisticos', component: PontosTuristicosComponent},
-        {path: 'onde-comer', component:ComidaComponent},
-        {path: 'hospedagem', component: HospedagemComponent},
-        {path: 'passeios', component: PasseiosComponent},
-        {path: 'info', component: InfoComponent},
-        {path: 'login', component: LoginComponent},
+      { path: '', component: HomeComponent },
+      { path: 'eventos', component: EventosComponent },
+      { path: 'eventos/:id', component: EventoDetalheComponent },
+      { path: 'pontos-turisticos', component: PontosTuristicosComponent },
+      { path: 'onde-comer', component: ComidaComponent },
+      { path: 'hospedagem', component: HospedagemComponent },
+      { path: 'passeios', component: PasseiosComponent },
+      { path: 'info', component: InfoComponent },
+      { path: 'login', component: LoginComponent },
     ],
   },
 ];

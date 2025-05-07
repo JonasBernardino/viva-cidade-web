@@ -1,0 +1,14 @@
+<div class="card"  (click)="abrirDetalhes()">
+  @if (imagemUrl) {
+  <img [src]="imagemUrl" alt="Imagem do evento" class="card-img" />
+  }
+
+  <div class="card-content">
+    <h2 class="card-title">{{ titulo }}</h2>
+    <p class="card-description">{{ descricao }}</p>
+    <div class="card-info">
+      <span class="data-hora">{{ dataHora }}</span>
+      <span class="localizacao">{{ localizacao }}</span>
+    </div>
+  </div>
+</div>

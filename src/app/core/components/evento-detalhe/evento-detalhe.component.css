@@ -1,0 +1,79 @@
+.evento-detalhe {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.evento-detalhe img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.evento-detalhe h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.evento-detalhe p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.evento-detalhe p strong {
+    color: #ff5733;
+}
+
+.btn-mapa {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.4rem;
+    background-color: #ff5733;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-mapa:hover {
+    background-color: #e04e2a;
+  }
+  
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .evento-detalhe {
+        padding: 1rem;
+    }
+
+    .evento-detalhe h1 {
+        font-size: 1.5rem;
+    }
+
+    .evento-detalhe p {
+        font-size: 0.95rem;
+    }
+}
