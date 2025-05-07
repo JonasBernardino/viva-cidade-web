@@ -10,11 +10,12 @@
   </button>
 
   <nav class="nav-links" [ngClass]="{ aberto: menuAberto }">
-    <a routerLink="/" (click)="fecharMenu()">Início</a>
     <a routerLink="/eventos" (click)="fecharMenu()">Eventos</a>
     <a routerLink="/pontos-turisticos" (click)="fecharMenu()">Pontos Turísticos</a>
-    <a routerLink="/estabelecimentos" (click)="fecharMenu()">Estabelecimentos</a>
-    <a routerLink="/chamados" (click)="fecharMenu()">Abrir Chamado</a>
+    <a routerLink="/onde-comer" (click)="fecharMenu()">Comida</a>
+    <a routerLink="/hospedagem" (click)="fecharMenu()">Hospedagem</a>
+    <a routerLink="/passeios" (click)="fecharMenu()">Passeios</a>
+    <a routerLink="/info" (click)="fecharMenu()">Informar a Prefeitura</a>
     <a routerLink="/login" class="login-button" (click)="fecharMenu()">Entrar</a>
   </nav>
 </header>
